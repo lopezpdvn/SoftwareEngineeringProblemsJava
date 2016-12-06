@@ -1,2 +1,9 @@
 /tmp
 /software-engineering-problems/target/
+*swp
+*~
+*.swp
+*.swo
+.~*#
+/tmp
+/bin
