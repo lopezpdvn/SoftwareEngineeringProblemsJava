@@ -6,6 +6,10 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.HashSet;
+import static java.lang.System.out;
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -26,7 +30,11 @@ public class AppTest {
     darr0.add(2, "two");
     darr0.add("four");
     assertEquals(darr0.size(), 5);
+    assertTrue(darr0.contains("one"));
     assertEquals(darr0.remove(1), "one");
+    assertTrue(!darr0.contains("one"));
+    assertEquals(darr0.get(1), "two");
+    assertEquals(darr0.indexOf("three"), 2);
     assertEquals(darr0.size(), 4);
     String[] ans = new String[] {"zero", "two", "three", "four"};
     int i = 0;
@@ -59,6 +67,7 @@ public class AppTest {
     assertEquals(5, ll.size());
     assertEquals(ll.getFirst(), "zero");
     assertEquals(ll.getLast(), "four");
+    assertEquals(ll.indexOf("three"), 3);
   }
 
   @Test
@@ -107,6 +116,30 @@ public class AppTest {
     for(Map.Entry<String, Integer> entry : map.entrySet()) {
       assertTrue(ansKeys.contains(entry.getKey()));
       assertTrue(ansValues.contains(entry.getValue()));
+    }
+  }
+
+  @Test
+  public void mathMisc() {
+    int a = 5, b = 2, c = -7, d = -3;
+    assertTrue(a/b == 2);
+    assertTrue(c/b == -3);
+
+    assertTrue(pow(3, 4) == 81);
+  }
+
+  @Test
+  public void textMisc() {
+    assertEquals("ABCD", "A" + 'B' + 'C' + "D");
+    char[] ansChars = {'a', 'b', 'c', 'd'};
+    String str = "abcd";
+    int j = 0;
+    for(int i = 0; i < str.length(); i++) {
+      assertEquals(ansChars[j++], str.charAt(i));
+    }
+    j = 0;
+    for(char c : str.toCharArray()) {
+      assertEquals(ansChars[j++], c);
     }
   }
 }
