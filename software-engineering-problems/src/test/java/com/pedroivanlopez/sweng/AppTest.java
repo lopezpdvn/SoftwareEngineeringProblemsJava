@@ -117,6 +117,8 @@ public class AppTest {
       assertTrue(ansKeys.contains(entry.getKey()));
       assertTrue(ansValues.contains(entry.getValue()));
     }
+
+    map.put("two", 23);
   }
 
   @Test
@@ -126,6 +128,8 @@ public class AppTest {
     assertTrue(c/b == -3);
 
     assertTrue(pow(3, 4) == 81);
+    int[] arr = new int[0];
+    //b = arr[0];
   }
 
   @Test
