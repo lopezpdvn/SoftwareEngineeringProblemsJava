@@ -145,5 +145,6 @@ public class AppTest {
     for(char c : str.toCharArray()) {
       assertEquals(ansChars[j++], c);
     }
+    assertEquals("emptiness".substring(9), "");
   }
 }
