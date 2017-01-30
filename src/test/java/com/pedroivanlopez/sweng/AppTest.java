@@ -1,14 +1,12 @@
 package com.pedroivanlopez.sweng;
 
 import java.util.ArrayList;
-import java.util.Vector;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.HashMap;
 import java.util.HashSet;
 import static java.lang.System.out;
 import static java.lang.Math.pow;
-import static java.lang.Math.sqrt;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
